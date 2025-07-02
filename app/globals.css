@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-sans;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-orange-50 to-red-50 min-h-screen;
+  }
+}
+
+@layer components {
+  .counter-btn {
+    @apply w-12 h-12 rounded-full font-bold text-xl transition-all duration-200 transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .counter-btn:hover {
+    @apply shadow-lg;
+  }
+  
+  .plus-btn {
+    @apply bg-green-500 hover:bg-green-600 text-white focus:ring-green-500;
+  }
+  
+  .minus-btn {
+    @apply bg-red-500 hover:bg-red-600 text-white focus:ring-red-500;
+  }
+  
+  .reset-btn {
+    @apply bg-gray-600 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-200 transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+  
+  .food-card {
+    @apply bg-white rounded-2xl shadow-lg p-6 transition-all duration-200 hover:shadow-xl hover:scale-[1.02] transform;
+  }
+  
+  .food-card:hover {
+    @apply shadow-2xl;
+    background: linear-gradient(135deg, #fff 0%, #fef7f0 100%);
+  }
+} 
