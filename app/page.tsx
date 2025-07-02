@@ -35,8 +35,19 @@ export default function Home() {
     
     // Fun sound effects
     const soundEffects = increment 
-      ? ["SIZZLE! 🔥", "YUM! 😋", "MORE! 🎉", "NICE! 👍", "BOOM! 💥"]
-      : ["POP! 💨", "OOPS! 😅", "LESS! 📉", "OK! 👌"]
+      ? [
+          "SIZZLE! 🔥", "YUM! 😋", "MORE! 🎉", "NICE! 👍", "BOOM! 💥",
+          "TASTY! 🤤", "HUNGRY! 😋", "FEAST! 🍽️", "GRILL! 🔥", "COOK! 👨‍🍳",
+          "PARTY! 🎊", "FIRE! 🌶️", "HOT! 🥵", "CRISPY! ✨", "JUICY! 💧",
+          "MMMMM! 😍", "SMOKY! 💨", "PERFECT! 💯", "GOLDEN! ⭐", "EPIC! 🚀",
+          "LOADED! 📈", "AWESOME! 🙌", "CHOICE! 👌", "STELLAR! ⭐", "WICKED! 😎"
+        ]
+      : [
+          "POP! 💨", "OOPS! 😅", "LESS! 📉", "OK! 👌",
+          "MINUS! ➖", "NOPE! 🙅", "BACK! ⬅️", "DOWN! ⬇️", "UNDO! ↩️",
+          "REMOVE! ❌", "DELETE! 🗑️", "WHOOPS! 😬", "REDUCE! 📉", "TRIM! ✂️",
+          "SHRINK! 📉", "LOWER! ⬇️", "CUT! ✂️", "DROP! 💧", "TAKE! 👋"
+        ]
     
     setSoundEffect(soundEffects[Math.floor(Math.random() * soundEffects.length)])
     setTimeout(() => setSoundEffect(null), 800)
@@ -58,24 +69,39 @@ export default function Home() {
     setTimeout(() => setAnimatingItem(null), 500)
     
     // Fun reset sound effect
-    setSoundEffect("RESET! 🧹")
+    const resetEffects = [
+      "RESET! 🧹", "CLEAN! ✨", "FRESH! 🆕", "START! 🎯", "CLEAR! 🧽",
+      "WIPE! 🗑️", "NEW! 🔄", "BLANK! 📄", "ZERO! 0️⃣", "EMPTY! 🗳️"
+    ]
+    setSoundEffect(resetEffects[Math.floor(Math.random() * resetEffects.length)])
     setTimeout(() => setSoundEffect(null), 1200)
   }
 
   const totalCount = foods.reduce((sum, food) => sum + food.count, 0)
 
   const getFunMessage = (count: number) => {
-    if (count === 0) return "Ready to fire up the grill! 🔥"
-    if (count <= 5) return "Getting started! Small but mighty BBQ 💪"
-    if (count <= 10) return "Nice crowd gathering! 🎉"
-    if (count <= 20) return "This is getting serious! 🚀"
-    if (count <= 30) return "BBQ party mode activated! 🎊"
-    if (count <= 50) return "Epic BBQ feast incoming! 🏆"
-    return "BBQ LEGEND STATUS! 👑🔥"
+    const messages = {
+      0: ["Ready to fire up the grill! 🔥", "Let's start grilling! 🌭", "BBQ time begins! 🍔", "Fire up those coals! ⚡"],
+      small: ["Getting warmed up! 💪", "Nice start! 🎯", "Building the feast! 🔨", "Small but mighty! ⭐", "Just getting started! 🚀"],
+      medium: ["Crowd is gathering! 🎉", "This is heating up! 🌡️", "Party vibes! 🎊", "Getting good! 👍", "Momentum building! 📈"],
+      large: ["Getting serious now! 🚀", "Big crowd incoming! 👥", "This is major! 💯", "Feast mode! 🍽️", "Going big! 🎯"],
+      huge: ["PARTY MODE! 🎊", "Epic proportions! 🏆", "Massive BBQ! 🎪", "Going all out! 🚀", "Beast mode! 💪"],
+      legendary: ["LEGEND STATUS! 👑", "BBQ MASTER! 🥇", "EPIC FEAST! 🏆", "GRILL CHAMPION! 🔥", "BBQ HERO! 🦸"]
+    }
+    
+    if (count === 0) return messages[0][Math.floor(Math.random() * messages[0].length)]
+    if (count <= 5) return messages.small[Math.floor(Math.random() * messages.small.length)]
+    if (count <= 10) return messages.medium[Math.floor(Math.random() * messages.medium.length)]
+    if (count <= 20) return messages.large[Math.floor(Math.random() * messages.large.length)]
+    if (count <= 30) return messages.huge[Math.floor(Math.random() * messages.huge.length)]
+    return messages.legendary[Math.floor(Math.random() * messages.legendary.length)]
   }
 
   const getRandomFireEmoji = () => {
-    const emojis = ["🔥", "🌶️", "💥", "⚡", "🎯"]
+    const emojis = [
+      "🔥", "🌶️", "💥", "⚡", "🎯", "🚀", "⭐", "💯", "🎉", "🔆", 
+      "✨", "💫", "🌟", "🎊", "🥵", "🌪️", "💨", "🌈", "🔸", "💎"
+    ]
     return emojis[Math.floor(Math.random() * emojis.length)]
   }
 
