@@ -79,8 +79,33 @@ export default function Home() {
     return emojis[Math.floor(Math.random() * emojis.length)]
   }
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "BBQ Tally",
+    "description": "Mobile app to count hot dogs, hamburgers, and cheeseburgers at BBQ parties and cookouts",
+    "url": "https://bbqtally.com",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike McConnell"
+    },
+    "keywords": "BBQ counter, barbecue planner, cookout tool, food counter, BBQ party, hot dog counter, hamburger tally"
+  }
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <div className="min-h-screen flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-md mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
@@ -201,5 +226,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </>
   )
 } 
