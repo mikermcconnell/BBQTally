@@ -58,7 +58,7 @@ export default function Home() {
     setTimeout(() => setAnimatingItem(null), 500)
     
     // Fun reset sound effect
-    setSoundEffect("FRESH START! 🧹✨")
+    setSoundEffect("RESET! 🧹")
     setTimeout(() => setSoundEffect(null), 1200)
   }
 
@@ -138,7 +138,7 @@ export default function Home() {
         {/* Sound Effect Display */}
         {soundEffect && (
           <div className="fixed top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-40">
-            <div className="text-3xl font-bold text-orange-600 animate-pop bg-white rounded-full px-4 py-2 shadow-lg border-2 border-orange-200">
+            <div className="text-xl md:text-3xl font-bold text-orange-600 animate-pop bg-white rounded-full px-3 py-1 md:px-4 md:py-2 shadow-lg border-2 border-orange-200 whitespace-nowrap">
               {soundEffect}
             </div>
           </div>
