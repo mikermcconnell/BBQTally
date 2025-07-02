@@ -108,19 +108,19 @@ export default function Home() {
       <div className="min-h-screen flex flex-col items-center justify-center p-3 md:p-4">
       <div className="w-full max-w-sm md:max-w-md mx-auto">
         {/* Header */}
-        <div className="text-center mb-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-1 relative">
+        <div className="text-center mb-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-1 relative">
             BBQ Tally 
-            {totalCount > 0 && <span className="ml-2 animate-bounce">{getRandomFireEmoji()}</span>}
+            {totalCount > 0 && <span className="ml-1 animate-bounce">{getRandomFireEmoji()}</span>}
           </h1>
-          <p className="text-gray-600 text-sm md:text-lg mb-2">Quick and easy way to count food preferences at your BBQ</p>
+          <p className="text-gray-600 text-xs md:text-base mb-1">Quick and easy way to count food preferences at your BBQ</p>
           
-          <div className="text-sm md:text-lg font-medium text-orange-600 mb-2">
+          <div className="text-xs md:text-base font-medium text-orange-600 mb-1">
             {getFunMessage(totalCount)}
           </div>
           
           {totalCount > 0 && (
-            <div className="text-lg md:text-2xl font-semibold text-gray-700 bg-white rounded-full px-3 py-1 md:px-4 md:py-2 shadow-md inline-block">
+            <div className="text-base md:text-xl font-semibold text-gray-700 bg-white rounded-full px-3 py-1 shadow-md inline-block">
               🍽️ {totalCount} {totalCount === 1 ? 'item' : 'items'} to grill!
             </div>
           )}
@@ -129,7 +129,7 @@ export default function Home() {
         {/* Celebration Overlay */}
         {celebration && (
           <div className="fixed inset-0 pointer-events-none z-50 flex items-center justify-center">
-            <div className="text-6xl animate-bounce">
+            <div className="text-4xl md:text-6xl animate-bounce">
               🎉 MILESTONE! 🎉
             </div>
           </div>
@@ -138,27 +138,27 @@ export default function Home() {
         {/* Sound Effect Display */}
         {soundEffect && (
           <div className="fixed top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-40">
-            <div className="text-xl md:text-3xl font-bold text-orange-600 animate-pop bg-white rounded-full px-3 py-1 md:px-4 md:py-2 shadow-lg border-2 border-orange-200 whitespace-nowrap">
+            <div className="text-lg md:text-2xl font-bold text-orange-600 animate-pop bg-white rounded-full px-3 py-1 shadow-lg border-2 border-orange-200 whitespace-nowrap">
               {soundEffect}
             </div>
           </div>
         )}
 
         {/* Food Counters */}
-        <div className="space-y-3 mb-6">
+        <div className="space-y-2 mb-4">
           {foods.map((food) => (
             <div
               key={food.id}
               className={`food-card ${animatingItem === food.id ? 'animate-pop' : ''}`}
             >
-              <div className="flex items-center justify-between min-h-[80px]">
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl md:text-3xl flex-shrink-0" role="img" aria-label={food.name}>
+              <div className="flex items-center justify-between min-h-[70px]">
+                <div className="flex items-center space-x-2">
+                  <span className="text-xl md:text-2xl flex-shrink-0" role="img" aria-label={food.name}>
                     {food.emoji}
                   </span>
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-semibold text-gray-800 text-base md:text-lg leading-tight">{food.name}</h3>
-                    <p className="text-gray-500 text-xs md:text-sm leading-tight">
+                    <h3 className="font-semibold text-gray-800 text-sm md:text-base leading-tight">{food.name}</h3>
+                    <p className="text-gray-500 text-xs leading-tight">
                       {food.count} {food.count === 1 ? food.name.toLowerCase().replace('-', '') : 
                         food.id === 'hotdog' ? 'hot dogs' :
                         food.id === 'hamburger' ? 'hamburgers' : 'cheeseburgers'}
@@ -166,10 +166,10 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-2 md:space-x-3 flex-shrink-0">
+                <div className="flex items-center space-x-2 flex-shrink-0">
                   <button
                     onClick={() => updateCount(food.id, false)}
-                    className={`w-10 h-10 md:w-12 md:h-12 rounded-full font-bold text-lg md:text-xl transition-all duration-200 transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-red-500 hover:bg-red-600 text-white focus:ring-red-500 ${food.count === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-lg'}`}
+                    className={`w-9 h-9 md:w-10 md:h-10 rounded-full font-bold text-base md:text-lg transition-all duration-200 transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-red-500 hover:bg-red-600 text-white focus:ring-red-500 ${food.count === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-lg'}`}
                     disabled={food.count === 0}
                     aria-label={`Decrease ${food.name} count`}
                     title="Remove one"
@@ -177,13 +177,13 @@ export default function Home() {
                     -
                   </button>
                   
-                  <span className={`text-xl md:text-2xl font-bold text-gray-800 min-w-[2.5rem] md:min-w-[3rem] text-center transition-all duration-200 ${animatingItem === food.id ? 'animate-wiggle text-orange-600' : ''}`}>
+                  <span className={`text-lg md:text-xl font-bold text-gray-800 min-w-[2rem] md:min-w-[2.5rem] text-center transition-all duration-200 ${animatingItem === food.id ? 'animate-wiggle text-orange-600' : ''}`}>
                     {food.count}
                   </span>
                   
                   <button
                     onClick={() => updateCount(food.id, true)}
-                    className="w-10 h-10 md:w-12 md:h-12 rounded-full font-bold text-lg md:text-xl transition-all duration-200 transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-green-500 hover:bg-green-600 text-white focus:ring-green-500 hover:shadow-lg hover:animate-pulse-fun"
+                    className="w-9 h-9 md:w-10 md:h-10 rounded-full font-bold text-base md:text-lg transition-all duration-200 transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-green-500 hover:bg-green-600 text-white focus:ring-green-500 hover:shadow-lg hover:animate-pulse-fun"
                     aria-label={`Increase ${food.name} count`}
                     title="Add one more!"
                   >
@@ -199,7 +199,7 @@ export default function Home() {
         <div className="text-center">
           <button
             onClick={resetAll}
-            className={`bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 md:px-8 md:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-200 transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 ${animatingItem === 'reset' ? 'animate-bounce-gentle' : ''} ${totalCount === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105'}`}
+            className={`bg-gray-600 hover:bg-gray-700 text-white px-5 py-1.5 md:px-6 md:py-2 rounded-full font-semibold text-xs md:text-sm transition-all duration-200 transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 ${animatingItem === 'reset' ? 'animate-bounce-gentle' : ''} ${totalCount === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105'}`}
             disabled={totalCount === 0}
             aria-label="Reset all counts to zero"
           >
@@ -209,8 +209,8 @@ export default function Home() {
 
         {/* Fun Facts */}
         {totalCount > 15 && (
-          <div className="text-center mt-4 p-3 md:p-4 bg-orange-100 rounded-2xl">
-            <p className="text-orange-800 font-medium text-sm md:text-base">
+          <div className="text-center mt-3 p-2 md:p-3 bg-orange-100 rounded-2xl">
+            <p className="text-orange-800 font-medium text-xs md:text-sm">
               🔥 Pro Tip: That's enough food to feed a hungry crowd! 
               Better start preheating! 🌡️
             </p>
@@ -218,9 +218,8 @@ export default function Home() {
         )}
 
         {/* Footer */}
-        <div className="text-center mt-6 md:mt-8 text-gray-500 text-xs md:text-sm">
-          <p className="mb-1">Perfect for backyard BBQs and cookouts! 🔥</p>
-          <p className="text-xs opacity-75">
+        <div className="text-center mt-4 text-gray-500 text-xs">
+          <p className="opacity-75">
             Made with ❤️ for grill masters everywhere
           </p>
         </div>

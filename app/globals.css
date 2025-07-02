@@ -34,7 +34,7 @@
   }
   
   .food-card {
-    @apply bg-white rounded-2xl shadow-lg p-4 md:p-6 transition-all duration-200 hover:shadow-xl hover:scale-[1.02] transform;
+    @apply bg-white rounded-2xl shadow-lg p-3 md:p-4 transition-all duration-200 hover:shadow-xl hover:scale-[1.02] transform;
   }
   
   .food-card:hover {
