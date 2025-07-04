@@ -222,7 +222,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
       />
       <div className="min-h-screen flex flex-col items-center justify-center p-3 md:p-4">
-      <div className="w-full max-w-sm md:max-w-md mx-auto">
+      <div className="w-full max-w-sm md:max-w-md mx-auto relative">
         {/* Header */}
         <div className="text-center mb-4">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-1 relative">
@@ -251,9 +251,9 @@ export default function Home() {
           </div>
         )}
 
-        {/* Sound Effect Display */}
+        {/* Sound Effect Display (moved above food counters and made absolute) */}
         {soundEffect && (
-          <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 pointer-events-none z-40">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-40">
             <div className="text-lg md:text-2xl font-bold text-orange-600 animate-pop bg-white rounded-full px-3 py-1 shadow-lg border-2 border-orange-200 whitespace-nowrap">
               {soundEffect}
             </div>
