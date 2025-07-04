@@ -7,25 +7,32 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'BBQ Tally - Mobile BBQ Food Counter for Cookouts and Parties',
-  description: 'Quick and easy mobile app to count hot dogs, hamburgers, and cheeseburgers at your BBQ. Perfect for backyard cookouts, camping, and outdoor gatherings. Free BBQ planning tool.',
-  keywords: 'BBQ counter, barbecue planner, cookout tool, food counter, BBQ party, hot dog counter, hamburger tally, outdoor cooking, BBQ app',
+  description: 'Quick and easy website to count hot dogs, hamburgers, and cheeseburgers at your BBQ. Perfect for backyard cookouts, camping, and outdoor gatherings. Free BBQ planning tool.',
+  keywords: 'BBQ counter, barbecue planner, cookout tool, food counter, BBQ party, hot dog counter, hamburger tally, outdoor cooking, BBQ app, party planning, food tracking, grill counter, backyard BBQ, camping food, outdoor party, cookout planning, BBQ organizer, food tally app, free BBQ tool, mobile food counter',
   authors: [{ name: 'Mike McConnell' }],
   creator: 'Mike McConnell',
   publisher: 'BBQ Tally',
-  robots: 'index, follow',
+  robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   viewport: 'width=device-width, initial-scale=1',
+  alternates: {
+    canonical: 'https://www.bbqtally.com'
+  },
+  category: 'Utility',
+  classification: 'BBQ Planning Tool',
   openGraph: {
     title: 'BBQ Tally - Mobile BBQ Food Counter',
     description: 'Quick and easy way to count food preferences at your BBQ. Perfect for cookouts and outdoor parties!',
     url: 'https://www.bbqtally.com',
     siteName: 'BBQ Tally',
     type: 'website',
+    locale: 'en_US',
     images: [
       {
         url: 'https://www.bbqtally.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'BBQ Tally - Mobile Food Counter App',
+        type: 'image/png',
       },
     ],
   },
@@ -34,7 +41,17 @@ export const metadata: Metadata = {
     title: 'BBQ Tally - Mobile BBQ Food Counter',
     description: 'Quick and easy way to count food preferences at your BBQ',
     images: ['https://www.bbqtally.com/og-image.png'],
+    creator: '@bbqtally',
   },
+  other: {
+    'application-name': 'BBQ Tally',
+    'apple-mobile-web-app-title': 'BBQ Tally',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+    'mobile-web-app-capable': 'yes',
+    'msapplication-TileColor': '#FF6B35',
+    'theme-color': '#FF6B35',
+  }
 }
 
 export default function RootLayout({
@@ -46,9 +63,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="google-adsense-account" content="ca-pub-4725000956854577" />
+        <link rel="manifest" href="/manifest.json" />
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4725000956854577"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4725500095689457"
           crossOrigin="anonymous"
         ></script>
       </head>

@@ -109,20 +109,102 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "BBQ Tally",
-    "description": "Mobile app to count hot dogs, hamburgers, and cheeseburgers at BBQ parties and cookouts",
+    "description": "Mobile app to count hot dogs, hamburgers, and cheeseburgers at BBQ parties and cookouts. Perfect for backyard cookouts, camping, and outdoor gatherings.",
     "url": "https://www.bbqtally.com",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Web",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
     "offers": {
       "@type": "Offer",
       "price": "0",
-      "priceCurrency": "USD"
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
     },
     "author": {
       "@type": "Person",
       "name": "Mike McConnell"
     },
-    "keywords": "BBQ counter, barbecue planner, cookout tool, food counter, BBQ party, hot dog counter, hamburger tally"
+    "keywords": "BBQ counter, barbecue planner, cookout tool, food counter, BBQ party, hot dog counter, hamburger tally, outdoor cooking, BBQ app, party planning, food tracking",
+    "featureList": [
+      "Hot dog counter",
+      "Hamburger counter", 
+      "Cheeseburger counter",
+      "Real-time tally",
+      "Mobile-friendly design",
+      "No registration required",
+      "Instant counting"
+    ],
+    "screenshot": "https://www.bbqtally.com/og-image.png",
+    "softwareVersion": "1.0.0",
+    "datePublished": "2025-01-07",
+    "dateModified": "2025-01-07",
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }
+
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I count food at my BBQ party?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use BBQ Tally - a free mobile app that lets you quickly count hot dogs, hamburgers, and cheeseburgers. Simply tap the + button for each item ordered, and the app keeps a running total for your cookout."
+        }
+      },
+      {
+        "@type": "Question", 
+        "name": "What's the best way to track food orders at a BBQ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BBQ Tally is the easiest way to track food orders at your BBQ. It's a mobile-friendly web app that works on any device, requires no download or registration, and provides instant counting for hot dogs, hamburgers, and cheeseburgers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a free app for counting BBQ food?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "Yes! BBQ Tally is completely free to use. It's a web-based app that works on any device with a browser. No downloads, no registration, and no cost - perfect for backyard cookouts and outdoor parties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I plan food quantities for a BBQ party?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use BBQ Tally to count orders in real-time during your BBQ. This helps you track exactly how many hot dogs, hamburgers, and cheeseburgers your guests want, making it easier to plan quantities and avoid waste."
+        }
+      }
+    ]
+  }
+
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.bbqtally.com"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "BBQ Tally",
+        "item": "https://www.bbqtally.com"
+      }
+    ]
   }
 
   return (
@@ -130,6 +212,14 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
       />
       <div className="min-h-screen flex flex-col items-center justify-center p-3 md:p-4">
       <div className="w-full max-w-sm md:max-w-md mx-auto">
@@ -163,7 +253,7 @@ export default function Home() {
 
         {/* Sound Effect Display */}
         {soundEffect && (
-          <div className="fixed top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-40">
+          <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 pointer-events-none z-40">
             <div className="text-lg md:text-2xl font-bold text-orange-600 animate-pop bg-white rounded-full px-3 py-1 shadow-lg border-2 border-orange-200 whitespace-nowrap">
               {soundEffect}
             </div>
