@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'BBQ Tally - Mobile BBQ Food Counter',
     description: 'Quick and easy way to count food preferences at your BBQ. Perfect for cookouts and outdoor parties!',
-    url: 'https://bbqtally.com',
+    url: 'https://www.bbqtally.com',
     siteName: 'BBQ Tally',
     type: 'website',
     images: [
       {
-        url: 'https://bbqtally.com/og-image.png',
+        url: 'https://www.bbqtally.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'BBQ Tally - Mobile Food Counter App',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BBQ Tally - Mobile BBQ Food Counter',
     description: 'Quick and easy way to count food preferences at your BBQ',
-    images: ['https://bbqtally.com/og-image.png'],
+    images: ['https://www.bbqtally.com/og-image.png'],
   },
 }
 

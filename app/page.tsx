@@ -110,7 +110,7 @@ export default function Home() {
     "@type": "WebApplication",
     "name": "BBQ Tally",
     "description": "Mobile app to count hot dogs, hamburgers, and cheeseburgers at BBQ parties and cookouts",
-    "url": "https://bbqtally.com",
+    "url": "https://www.bbqtally.com",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Web",
     "offers": {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bbqtally.com/sitemap.xml 
+Sitemap: https://www.bbqtally.com/sitemap.xml 
