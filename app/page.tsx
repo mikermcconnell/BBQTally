@@ -239,12 +239,14 @@ export default function Home() {
               className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-xl font-bold text-base shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 border-2 border-orange-600 hover:scale-105"
             >
               <span className="text-2xl">📖</span>
+              <span>Guide</span>
             </Link>
             <Link 
               href="/bbq-planner"
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-bold text-base shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 border-2 border-blue-700 hover:scale-105"
             >
-              <span className="text-2xl">📋</span>
+              <span className="text-2xl">🛒</span>
+              <span>Shopping List</span>
             </Link>
           </div>
           
