@@ -64,11 +64,13 @@ export default function RootLayout({
       <head>
         <meta name="google-adsense-account" content="ca-pub-4725000956854577" />
         <link rel="manifest" href="/manifest.json" />
+        {/* Temporarily disabled until content policy violations are resolved
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4725500095689457"
           crossOrigin="anonymous"
         ></script>
+        */}
       </head>
       <body className={inter.className}>
         {children}
