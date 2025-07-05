@@ -70,6 +70,8 @@ export default function RootLayout({
       <head>
         <meta name="google-adsense-account" content="ca-pub-4725000956854577" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/icon-512.png" sizes="512x512" type="image/png" />
+        <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png" />
         {/* Temporarily disabled until content policy violations are resolved
         <script
           async
