@@ -236,9 +236,15 @@ export default function Home() {
           <div className="mb-2">
             <Link 
               href="/bbq-guide"
-              className="text-orange-600 hover:text-orange-700 text-xs md:text-sm underline transition-colors"
+              className="text-orange-600 hover:text-orange-700 text-xs md:text-sm underline transition-colors mr-4"
             >
               📖 BBQ Planning Guide & Tips
+            </Link>
+            <Link 
+              href="/bbq-planner"
+              className="text-blue-600 hover:text-blue-700 text-xs md:text-sm underline transition-colors"
+            >
+              📋 BBQ Planner & Shopping List
             </Link>
           </div>
           

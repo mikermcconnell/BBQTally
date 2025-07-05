@@ -21,12 +21,20 @@ export default function BBQGuide() {
               <h1 className="text-3xl font-bold text-gray-800">🔥 BBQ Guide</h1>
               <p className="text-gray-600 mt-1">Your complete guide to perfect BBQ planning and grilling</p>
             </div>
-            <Link 
-              href="/"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
-            >
-              🍔 Food Counter
-            </Link>
+            <div className="flex space-x-3">
+              <Link 
+                href="/bbq-planner"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+              >
+                📋 BBQ Planner
+              </Link>
+              <Link 
+                href="/"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+              >
+                🍔 Food Counter
+              </Link>
+            </div>
           </div>
         </div>
       </div>
