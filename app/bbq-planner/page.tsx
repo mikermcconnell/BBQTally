@@ -201,15 +201,15 @@ export default function BBQPlanner() {
             <div className="flex space-x-3">
               <Link 
                 href="/bbq-guide"
-                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold text-base shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 border-2 border-blue-700 hover:scale-105"
               >
-                📖 BBQ Guide
+                <span className="text-xl">📖</span> BBQ Guide
               </Link>
               <Link 
                 href="/"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-bold text-base shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 border-2 border-orange-600 hover:scale-105"
               >
-                🍔 Food Counter
+                <span className="text-xl">🍔</span> Food Counter
               </Link>
             </div>
           </div>
