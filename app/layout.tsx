@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import React from 'react'
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   creator: 'Mike McConnell',
   publisher: 'BBQ Tally',
   robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-  viewport: 'width=device-width, initial-scale=1',
+  metadataBase: new URL('https://www.bbqtally.com'),
   alternates: {
     canonical: 'https://www.bbqtally.com'
   },
@@ -54,6 +55,11 @@ export const metadata: Metadata = {
   }
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -74,6 +80,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {children}
+        <Analytics />
       </body>
     </html>
   )
