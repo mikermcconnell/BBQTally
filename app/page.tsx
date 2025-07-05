@@ -233,18 +233,18 @@ export default function Home() {
           <p className="text-gray-600 text-xs md:text-base mb-1">Quick and easy way to count food preferences at your BBQ</p>
           
           {/* Navigation Link */}
-          <div className="mb-2">
+          <div className="mb-4 flex justify-center gap-4">
             <Link 
               href="/bbq-guide"
-              className="text-orange-600 hover:text-orange-700 text-xs md:text-sm underline transition-colors mr-4"
+              className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-xl font-bold text-base shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 border-2 border-orange-600 hover:scale-105"
             >
-              📖 BBQ Planning Guide & Tips
+              <span className="text-2xl">📖</span>
             </Link>
             <Link 
               href="/bbq-planner"
-              className="text-blue-600 hover:text-blue-700 text-xs md:text-sm underline transition-colors"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-bold text-base shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 border-2 border-blue-700 hover:scale-105"
             >
-              📋 BBQ Planner & Shopping List
+              <span className="text-2xl">📋</span>
             </Link>
           </div>
           
