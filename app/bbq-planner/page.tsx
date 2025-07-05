@@ -272,24 +272,7 @@ export default function BBQPlanner() {
               </div>
 
               {/* Dietary Restrictions */}
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Dietary Considerations
-                </label>
-                <div className="space-y-2">
-                  {['Vegetarian', 'Vegan', 'Gluten-Free', 'Dairy-Free'].map(restriction => (
-                    <label key={restriction} className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={dietaryRestrictions.includes(restriction)}
-                        onChange={() => toggleDietaryRestriction(restriction)}
-                        className="mr-2 rounded"
-                      />
-                      <span className="text-sm text-gray-700">{restriction}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
+              {/* Removed Dietary Considerations section as requested */}
             </div>
 
             {/* Food Calculations */}
