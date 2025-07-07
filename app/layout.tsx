@@ -72,13 +72,11 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/icon-512.png" sizes="512x512" type="image/png" />
         <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png" />
-        {/* Temporarily disabled until content policy violations are resolved
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4725500095689457"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4725000956854577"
           crossOrigin="anonymous"
         ></script>
-        */}
       </head>
       <body className={inter.className}>
         {children}
