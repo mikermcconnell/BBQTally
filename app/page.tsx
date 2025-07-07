@@ -208,19 +208,22 @@ export default function Home() {
     ]
   }
 
+  // Combine all schema objects into one graph to ensure each appears only once
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { ...structuredData, "@context": undefined },
+      { ...faqData, "@context": undefined },
+      { ...breadcrumbData, "@context": undefined }
+    ]
+  }
+
   return (
     <>
       <script
+        id="bbqtally-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
       />
       <div className="min-h-screen flex flex-col items-center justify-center p-3 md:p-4">
       <div className="w-full max-w-sm md:max-w-md mx-auto relative">
