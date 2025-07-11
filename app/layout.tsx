@@ -7,9 +7,9 @@ import { Analytics } from '@vercel/analytics/react'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'BBQ Tally - Mobile BBQ Food Counter for Cookouts and Parties',
+  title: 'BBQ Tally - BBQ Food Counter for Cookouts and Parties',
   description: 'Quick and easy website to count hot dogs, hamburgers, and cheeseburgers at your BBQ. Perfect for backyard cookouts, camping, and outdoor gatherings. Free BBQ planning tool.',
-  keywords: 'BBQ counter, barbecue planner, cookout tool, food counter, BBQ party, hot dog counter, hamburger tally, outdoor cooking, BBQ app, party planning, food tracking, grill counter, backyard BBQ, camping food, outdoor party, cookout planning, BBQ organizer, food tally app, free BBQ tool, mobile food counter',
+  keywords: 'BBQ counter, barbecue planner, cookout tool, food counter, BBQ party, hot dog counter, hamburger tally, outdoor cooking, BBQ app, party planning, food tracking, grill counter, backyard BBQ, camping food, outdoor party, cookout planning, BBQ organizer, food tally app, free BBQ tool, mobile food counter, cookout order tracker, grill party calculator, tailgate counter',
   authors: [{ name: 'Mike McConnell' }],
   creator: 'Mike McConnell',
   publisher: 'BBQ Tally',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   category: 'Utility',
   classification: 'BBQ Planning Tool',
   openGraph: {
-    title: 'BBQ Tally - Mobile BBQ Food Counter',
+    title: 'BBQ Tally - BBQ Food Counter',
     description: 'Quick and easy way to count food preferences at your BBQ. Perfect for cookouts and outdoor parties!',
     url: 'https://www.bbqtally.com',
     siteName: 'BBQ Tally',
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
         url: 'https://www.bbqtally.com/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'BBQ Tally - Mobile Food Counter App',
+        alt: 'BBQ Tally - Food Counter App',
         type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BBQ Tally - Mobile BBQ Food Counter',
+    title: 'BBQ Tally - BBQ Food Counter',
     description: 'Quick and easy way to count food preferences at your BBQ',
     images: ['https://www.bbqtally.com/og-image.png'],
     creator: '@bbqtally',
