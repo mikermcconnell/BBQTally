@@ -14,7 +14,7 @@ export default function Home() {
   const [foods, setFoods] = useState<FoodItem[]>([
     { id: 'hotdog', name: 'Hot Dog', emoji: '🌭', count: 0 },
     { id: 'hamburger', name: 'Hamburger', emoji: '🍔', count: 0 },
-    { id: 'cheeseburger', name: 'Cheese-burger', emoji: '🧀🍔', count: 0 },
+    { id: 'cheeseburger', name: 'Cheese burger', emoji: '🧀🍔', count: 0 },
   ])
 
   const [animatingItem, setAnimatingItem] = useState<string | null>(null)
