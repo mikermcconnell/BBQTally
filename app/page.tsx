@@ -125,7 +125,7 @@ export default function Home() {
       "@type": "Person",
       "name": "Mike McConnell"
     },
-    "keywords": "BBQ counter, barbecue planner, cookout tool, food counter, BBQ party, hot dog counter, hamburger tally, outdoor cooking, BBQ app, party planning, food tracking",
+    "keywords": "BBQ counter, barbecue planner, cookout tool, food counter, BBQ party, hot dog counter, hamburger tally, outdoor cooking, BBQ app, party planning, food tracking, cookout order tracker, grill party calculator, tailgate counter",
     "featureList": [
       "Hot dog counter",
       "Hamburger counter", 
@@ -184,6 +184,30 @@ export default function Home() {
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Use BBQ Tally to count orders in real-time during your BBQ. This helps you track exactly how many hot dogs, hamburgers, and cheeseburgers your guests want, making it easier to plan quantities and avoid waste."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many burgers do I need for X people?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Open BBQ Tally’s planner or /bbq-for-X-people page, enter your guest count, and we’ll calculate the exact number of burgers—and other items—you should buy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What food should I count for a BBQ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The essentials are hot dogs, hamburgers, cheeseburgers, buns, cheese slices, sides, and drinks. BBQ Tally tracks them all in one tap."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a BBQ party planning checklist?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes—our BBQ Planner provides a smart, printable checklist automatically sized to your guest count."
         }
       }
     ]
@@ -354,6 +378,21 @@ export default function Home() {
             </p>
           </div>
         )}
+
+        {/* Quick BBQ Planning Guide - featured snippet content */}
+        <section className="mt-8 bg-white rounded-lg p-6 shadow-md">
+          <h2 className="text-xl font-bold mb-4">Quick BBQ Planning Guide</h2>
+          <div className="space-y-4 text-sm md:text-base">
+            <div>
+              <h3 className="font-semibold">How many burgers should I plan per person?</h3>
+              <p className="text-gray-700">Plan for 1-2 burgers per adult and 1 burger per child. For a mixed crowd, calculate 1.5 burgers per person and add 10% extra.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold">How do I count BBQ food orders?</h3>
+              <p className="text-gray-700">Use BBQ Tally's simple counters: tap + for each hot dog, hamburger, or cheeseburger ordered. The app keeps a running total for easy shopping.</p>
+            </div>
+          </div>
+        </section>
 
         {/* Footer */}
         <div className="text-center mt-4 text-gray-500 text-xs">
