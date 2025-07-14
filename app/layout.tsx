@@ -68,6 +68,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RFTLD46PP"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-0RFTLD46PP');
+            `,
+          }}
+        />
         <meta name="google-adsense-account" content="ca-pub-4725000956854577" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/icon-512.png" sizes="512x512" type="image/png" />
