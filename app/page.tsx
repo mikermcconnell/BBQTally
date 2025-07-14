@@ -15,6 +15,7 @@ export default function Home() {
     { id: 'hotdog', name: 'Hot Dog', emoji: '🌭', count: 0 },
     { id: 'hamburger', name: 'Hamburger', emoji: '🍔', count: 0 },
     { id: 'cheeseburger', name: 'Cheese burger', emoji: '🧀🍔', count: 0 },
+    { id: 'toastedbun', name: 'Toasted Bun', emoji: '🍞', count: 0 },
   ])
 
   const [animatingItem, setAnimatingItem] = useState<string | null>(null)
@@ -110,7 +111,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "BBQ Tally",
-    "description": "Mobile app to count hot dogs, hamburgers, and cheeseburgers at BBQ parties and cookouts. Perfect for backyard cookouts, camping, and outdoor gatherings.",
+    "description": "Mobile app to count hot dogs, hamburgers, and cheese burgers at BBQ parties and cookouts. Perfect for backyard cookouts, camping, and outdoor gatherings.",
     "url": "https://www.bbqtally.com",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Web",
@@ -129,7 +130,7 @@ export default function Home() {
     "featureList": [
       "Hot dog counter",
       "Hamburger counter", 
-      "Cheeseburger counter",
+      "Cheese burger counter",
       "Real-time tally",
       "Mobile-friendly design",
       "No registration required",
@@ -159,7 +160,7 @@ export default function Home() {
         "name": "How do I count food at my BBQ party?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Use BBQ Tally - a free mobile app that lets you quickly count hot dogs, hamburgers, and cheeseburgers. Simply tap the + button for each item ordered, and the app keeps a running total for your cookout."
+          "text": "Use BBQ Tally - a free mobile app that lets you quickly count hot dogs, hamburgers, and cheese burgers. Simply tap the + button for each item ordered, and the app keeps a running total for your cookout."
         }
       },
       {
@@ -167,7 +168,7 @@ export default function Home() {
         "name": "What's the best way to track food orders at a BBQ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "BBQ Tally is the easiest way to track food orders at your BBQ. It's a mobile-friendly web app that works on any device, requires no download or registration, and provides instant counting for hot dogs, hamburgers, and cheeseburgers."
+          "text": "BBQ Tally is the easiest way to track food orders at your BBQ. It's a mobile-friendly web app that works on any device, requires no download or registration, and provides instant counting for hot dogs, hamburgers, and cheese burgers."
         }
       },
       {
@@ -183,7 +184,7 @@ export default function Home() {
         "name": "How do I plan food quantities for a BBQ party?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Use BBQ Tally to count orders in real-time during your BBQ. This helps you track exactly how many hot dogs, hamburgers, and cheeseburgers your guests want, making it easier to plan quantities and avoid waste."
+          "text": "Use BBQ Tally to count orders in real-time during your BBQ. This helps you track exactly how many hot dogs, hamburgers, and cheese burgers your guests want, making it easier to plan quantities and avoid waste."
         }
       },
       {
@@ -199,7 +200,7 @@ export default function Home() {
         "name": "What food should I count for a BBQ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The essentials are hot dogs, hamburgers, cheeseburgers, buns, cheese slices, sides, and drinks. BBQ Tally tracks them all in one tap."
+          "text": "The essentials are hot dogs, hamburgers, cheese burgers, buns, cheese slices, sides, and drinks. BBQ Tally tracks them all in one tap."
         }
       },
       {
@@ -268,13 +269,6 @@ export default function Home() {
               <span className="text-2xl">📖</span>
               <span>Guide</span>
             </Link>
-            <Link 
-              href="/bbq-planner"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-bold text-base shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 border-2 border-blue-700 hover:scale-105"
-            >
-              <span className="text-2xl">🛒</span>
-              <span>Shopping List</span>
-            </Link>
           </div>
           
           <div className="text-xs md:text-base font-medium text-orange-600 mb-1">
@@ -323,7 +317,9 @@ export default function Home() {
                     <p className="text-gray-500 text-xs leading-tight">
                       {food.count} {food.count === 1 ? food.name.toLowerCase().replace('-', '') : 
                         food.id === 'hotdog' ? 'hot dogs' :
-                        food.id === 'hamburger' ? 'hamburgers' : 'cheeseburgers'}
+                        food.id === 'hamburger' ? 'hamburgers' : 
+                        food.id === 'cheeseburger' ? 'cheese burgers' :
+                        food.id === 'toastedbun' ? 'toasted buns' : ''}
                     </p>
                   </div>
                 </div>
@@ -379,20 +375,7 @@ export default function Home() {
           </div>
         )}
 
-        {/* Quick BBQ Planning Guide - featured snippet content */}
-        <section className="mt-8 bg-white rounded-lg p-6 shadow-md">
-          <h2 className="text-xl font-bold mb-4">Quick BBQ Planning Guide</h2>
-          <div className="space-y-4 text-sm md:text-base">
-            <div>
-              <h3 className="font-semibold">How many burgers should I plan per person?</h3>
-              <p className="text-gray-700">Plan for 1-2 burgers per adult and 1 burger per child. For a mixed crowd, calculate 1.5 burgers per person and add 10% extra.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold">How do I count BBQ food orders?</h3>
-              <p className="text-gray-700">Use BBQ Tally's simple counters: tap + for each hot dog, hamburger, or cheeseburger ordered. The app keeps a running total for easy shopping.</p>
-            </div>
-          </div>
-        </section>
+
 
         {/* Footer */}
         <div className="text-center mt-4 text-gray-500 text-xs">
